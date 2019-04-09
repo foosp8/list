@@ -1,0 +1,32 @@
+<h1>A company particular</h1>
+<%= link_to "Home", cos_path %>
+<%= link_to "Edit", edit_co_path %>
+<%= link_to "Destroy", co_path(@co), method: :delete, data: {confirm: "Are you sure?"} %>  
+<p>
+Name:<br>
+<%= @co.name %>
+<p>
+Address:<br>
+<%= @co.add %>
+<p>
+Telephone Number:<br>
+<%= @co.tel %>
+<p>
+
+<h3> comparing using BR & P vs table & tr as shown below </h3>
+
+<table border="1" frame="lhs">
+<tr>
+<td>1st row) Name:</td>
+<td> <%= @co.name %> </td>
+</tr>
+<tr>
+<td>2nd row) Address:</td>
+<td> <%=@co.add %></td>
+</tr>
+<tr>
+<td>3rd row) Telephone number:</td>
+<td> <%=@co.tel %></td>
+</tr>
+
+</table>

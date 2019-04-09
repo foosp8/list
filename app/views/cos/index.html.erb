@@ -1,0 +1,25 @@
+<h1>NBC Tax Companies</h1>
+<%= link_to "New company to add", new_co_path %>
+<hr>
+<br>
+<table border='1' >
+  <th align="left">  No </th>
+  <th align="left">  Record ID </th>
+  <th align="left"> Company name </td>
+  <th align="middle">  Address </td>
+  <th align="left">  Telephone number </td>
+  <th align="left">  Action </th>
+
+<% @cos.each_with_index do |co, index | %>
+  <tr>
+  <td> <%= index +1%></td>
+  <td> <%= co.id %> </td>
+  <td> <%= co.name %> </td>
+  <td> <%= co.add %> </td>
+  <td> <%= co.tel %> </td>
+  <td> <%= link_to "Show", co_path(co) %> </td>
+</tr>
+<% end %>
+
+Total company as at to-date is <%= @cos.count %><br><br>
+</table>
